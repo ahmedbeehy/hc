@@ -10,28 +10,28 @@
       <div class="bg-transparent">
         <form action="/sharing" method="POST">
           <div class="input-group">
-            <input type="text" class="form-control" name="name" placeholder="Kod adı" style="background: none; color: white;" required>
+            <input type="text" class="form-control" name="name" placeholder="Code Name" style="background: none; color: white;" required>
             <div class="input-group-append">
               <% if (isStaff) { %>
                 <select class="custom-select bg-transparent" name="rank" id="rank_choice" style="background: none; color: white; height: 40px;" required>
                   <option value="normal" selected>Normal</option>
-                  <option value="gold">Altın</option>
-                  <option value="diamond">Elmas</option>
-                  <option value="ready">Hazır Sistem</option>
-                  <option value="fromyou">Sizden Gelenler</option>
+                  <option value="gold">Gold</option>
+                  <option value="diamond">Diamond</option>
+                  <option value="ready">Ready System</option>
+                  <option value="fromyou">Coming from you</option>
                 </select>
               <% } else { %>
                 <select class="custom-select bg-dark" name="rank" id="rank_choice" style="background: none; color: white;" required>
-                  <option value="fromyou" selected>Sizden Gelenler</option>
+                  <option value="fromyou" selected>Coming from you</option>
                 </select>
               <% } %>
             </div>
           </div><br>
           <input type="text" class="form-control" name="desc" placeholder="Code description" style="background: none; color: white;" required><br>
           <input type="text" class="form-control" name="sharers" placeholder="Those who wrote the code (Write the IDs of those who wrote the code, leaving a space)" style="background: none; color: white;"><br>
-          <input type="text" class="form-control" name="modules" placeholder="Modüller" style="background: none; color: white;"><br>
+          <input type="text" class="form-control" name="modules" placeholder="Modules" style="background: none; color: white;"><br>
           <h3>Main Kodu:</h3>
-          <textarea class="form-control" style="resize: none; background: none; color: white;" name="mainCode" id="main_code" rows="20" placeholder="Main dosyasına atılacak kod." required></textarea>
+          <textarea class="form-control" style="resize: none; background: none; color: white;" name="mainCode" id="main_code" rows="20" placeholder="Code to be placed in the main file." required></textarea>
           <br>
           <h3>Komut:</h3>
           <textarea class="form-control" style="resize: none; background: none; color: white;" name="command" id="komutlar_code" rows="20" placeholder="Komutlar klasörüne atılacak kod." required></textarea><br>
