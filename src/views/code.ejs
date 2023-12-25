@@ -8,7 +8,7 @@
       <br>
       <h5 style="color: gray;"><%= data.desc %></h5>
       <br>
-      <h5>Modüller: <kbd><%= data.modules %></kbd></h5>
+      <h5>Modules: <kbd><%= data.modules %></kbd></h5>
       <br><br>
       <h5>
         <% data.sharers.map(s => {
@@ -31,18 +31,18 @@
         </span>
       </a> 
       <% if (data.mainCode) { %>
-      <h2 style="text-align: left;">Main Kodu: <a onclick="copy('mainIcon')"><i class="far fa-copy" id="mainIcon"></i></a></h2>
+      <h2 style="text-align: left;">Main Code: <a onclick="copy('mainIcon')"><i class="far fa-copy" id="mainIcon"></i></a></h2>
       <pre style="height: 40pc; overflow-y: scroll"><code class="language-js" id="main"><%= data.mainCode %></code></pre>
       <br>
       <% } %>
       <% if (data.command) { %>
-      <h2 style="text-align: left;">Komut: <a onclick="copy('commandIcon')"><i class="far fa-copy" id="commandIcon"></i></a></h2>
+      <h2 style="text-align: left;">Command: <a onclick="copy('commandIcon')"><i class="far fa-copy" id="commandIcon"></i></a></h2>
       <pre style="height: 40pc; overflow-y: scroll"><code class="language-js" id="command"><%= data.command %></code></pre>
       <% } %>
       <% if (data.sharers.includes(user.id) || reqMember.hasPermission(8)) { %>
-      <a href="/edit/<%= data.rank %>/<%= data.id %>" class="btn btn-outline-warning" style="width: 100%;">Kodu düzenle</a>
+      <a href="/edit/<%= data.rank %>/<%= data.id %>" class="btn btn-outline-warning" style="width: 100%;">Edit code</a>
       <br><br>
-      <a href="/delete/<%= data.rank %>/<%= data.id %>" class="btn btn-outline-danger" style="width: 100%;">Kodu sil</a>
+      <a href="/delete/<%= data.rank %>/<%= data.id %>" class="btn btn-outline-danger" style="width: 100%;">Delete Code</a>
       <% } %>
       <form id="likeForm" action="/like" method="POST">
         <input name="id" id="likeName" type="hidden" value="<%= data.id %>">
