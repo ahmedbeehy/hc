@@ -3,22 +3,22 @@
     <%- include('partials/_header'); -%>
     <%- include('partials/_loader'); -%>
     <div class="container" style="margin-top: 100px;">
-      <h1 class="text-center">Hatalı/Yasak kod bildir</h1>
-      <h4 class="text-center">Hatalı/kurallara aykırı kodları bildirerek bize yardımcı olabilirsin.</h4>
+      <h1 class="text-center">Report Incorrect/Illegal code</h1>
+      <h4 class="text-center">You can help us by reporting incorrect/illegal codes.</h4>
       <hr>
       <div class="bg-transparent">
         <form action="/bug" method="POST">
-          <h3>Kod ID:</h3>
+          <h3>Code ID:</h3>
           <% if (codeID) { %>
-          <input type="text" class="form-control" value="<%= codeID %>" name="id" placeholder="Kod ID" style="background: none; color: white;" required>
+          <input type="text" class="form-control" value="<%= codeID %>" name="id" placeholder="Code ID" style="background: none; color: white;" required>
           <% } else { %>
           <input type="text" class="form-control" name="id" placeholder="Kod ID" style="background: none; color: white;" required>
           <% } %>
           <br>
-          <h3>Bulduğunuz hata:</h3>
-          <textarea class="form-control" style="resize: none; background: none; color: white;" name="bug" id="bug" rows="20" placeholder="Hata bulduysanız bulduğunuz hata, yoksa yetkililerin görmesi için yorumunuz." required></textarea>
+          <h3>The error you found:</h3>
+          <textarea class="form-control" style="resize: none; background: none; color: white;" name="bug" id="bug" rows="20" placeholder="If you found an error, comment it for the authorities to see." required></textarea>
           <br>
-          <button type="submit" class="btn btn-outline-primary btn-lg" style="width: 100%;">Paylaş</button>
+          <button type="submit" class="btn btn-outline-primary btn-lg" style="width: 100%;">Share</button>
         </form>
       </div>
     </div>
