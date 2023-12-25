@@ -4,15 +4,14 @@
     <%- include('partials/_loader'); -%>
     <div class="container" style="min-height: 100vh;">
       <h1 class="text-center" style="margin-top: 100px;">
-        Hazır Sistemler
+        Ready Systems
       </h1>
       <h5 class="text-center">
-        Kodlara bakmadan önce <a href="/information">Bilgilendirme</a> kısmını okumayı unutmayın!
-      </h5>
+        Before looking at the codes<a href="/information">To inform</a> Don't forget to read the part!      </h5>
       <hr>
 
       <div class="container">
-        <input id="search" type="text" class="form-control" placeholder="Kod ara" style="background: none; color: white;">
+        <input id="search" type="text" class="form-control" placeholder="Search for code" style="background: none; color: white;">
       </div><br>
 
       <center>
@@ -30,7 +29,7 @@
                 <p class="card-text avatar"><%= x.name %></p>
                 <p class="card-text avatar"><%= x.desc %></p>
                 <p class="card-text"><%= moment(x.date).add(3, "hours").format("LLL") %></p>
-                <a class="button1 nav-link" style="width: 100%; filter: invert(1);" href="/ready/<%= x.id %>"><b>Kodu İncele</b></a>
+                <a class="button1 nav-link" style="width: 100%; filter: invert(1);" href="/ready/<%= x.id %>"><b>Review Code</b></a>
               </div>
             </div>
           </div>
