@@ -14,19 +14,19 @@
       <br><br>
       <div class="row row-cols-1 row-cols-md-3">
       <h4>
-        Paylaştığı kod sayısı:<br><%= data.codes ? data.codes.length : 0 %>
+       Number of codes shared:<br><%= data.codes ? data.codes.length : 0 %>
       </h4>
       <h4>
-        Aldığı beğeni sayısı:<br><%= data.getLikeCount ? data.getLikeCount : 0 %>
+        Number of likes received:<br><%= data.getLikeCount ? data.getLikeCount : 0 %>
       </h4>
       <h4>
-        Beğendiği kod sayısı:<br><%= code ? code.filter(x => x.likedUsers.includes(member.user.id)).length : 0 %>
+        Number of codes he liked:<br><%= code ? code.filter(x => x.likedUsers.includes(member.user.id)).length : 0 %>
       </h4>
       </div>
       <br><br>
       <% if (data.codes) { %>
       <h3>
-        Paylaştığı kodlar:<br>
+        Codes he shared:<br>
         <% data.codes.sort((a, b) => b.date - a.date).map(x => { %>
         <a href="/<%= x.rank %>/<%= x.id %>" style="text-decoration: none; font-size: 23px;"><%= x.name %></a>
         <% }); %>
@@ -34,7 +34,7 @@
       <% } %>
       <% if (user && user.id === member.user.id && code.filter(x => x.likedUsers.includes(member.user.id)).length > 0) { %>
       <h3>
-        Beğendiği kodlar:<br>
+        Liked codes:<br>
         <% code.filter(x => x.likedUsers.includes(member.user.id)).map(x => { %>
         <a href="/<%= x.rank %>/<%= x.id %>" style="text-decoration: none; font-size: 23px;"><%= x.name %></a>
         <% }); %>
