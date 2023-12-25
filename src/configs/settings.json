@@ -1,6 +1,7 @@
 {
   "mongoURL": "mongodb+srv://MREXTINCTCODES:MREXTINCTCODES@cluster0.jnajm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   "clientID": "793142587203518485",
+   "token": "NzkzMTQyNTg3MjAzNTE4NDg1.GV1Rwx.zfH40Uxvug67hRmM7foGiyD69HLqCroGnD6BMc",
   "secret": "dxO-kRozOPuT7MdGdzbua9W_zzcc57BC",
   "callbackURL": "https://yug1d.github.io/hc/login"
 }
